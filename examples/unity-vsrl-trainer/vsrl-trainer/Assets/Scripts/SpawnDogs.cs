@@ -45,7 +45,7 @@ public class SpawnDogs : MonoBehaviour
         if (json != null)
         {
             config = JsonUtility.FromJson<FoxChickenConfig>(json);
-            Debug.Log("Penalty: " + config.penalty);
+            //debug.Log("Penalty: " + config.penalty);
         }
         else
         {

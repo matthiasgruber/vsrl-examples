@@ -78,7 +78,7 @@ public class ChickenAgentTrainer : Agent
         GetLevelArgs();
 
         // Show Reward and Penalty on terminal
-        Debug.Log("Reward: " + rewardStatus.ToString() + " -- Penalty: " + penaltyStatus.ToString());
+        // Debug.Log("Reward: " + rewardStatus.ToString() + " -- Penalty: " + penaltyStatus.ToString());
 
         // Show Reward and Penalty on screen
         if (textRewardController)
@@ -183,13 +183,13 @@ public class ChickenAgentTrainer : Agent
         }
         else
         {
-            Debug.Log("New positions");
+            // Debug.Log("New positions");
             spawnDogs.ResetObjects();
             spawnDogs.ResetPositions();
         }
 
-        Debug.Log("Trial: " + trial + "    Total Collisions Obj: " + NumCollisionsObj + "   Total Collisions Patrol: " +
-                  NumCollisionsPatrols);
+        // Debug.Log("Trial: " + trial + "    Total Collisions Obj: " + NumCollisionsObj + "   Total Collisions Patrol: " +
+                  // NumCollisionsPatrols);
         NumCollisionsObj = 0;
         NumCollisionsPatrols = 0;
         // If agent fell, zero its momentum
@@ -415,8 +415,8 @@ public class ChickenAgentTrainer : Agent
 
     private void RandomDronePosition()
     {
-        float x = -0.9f + Random.Range(0f, 2f);
-        float z = -0.15f - Random.Range(0f, 1.3f);
+        float x = -2.5f + Random.Range(0f, 5.0f);
+        float z = -0.15f - Random.Range(0f, 3.0f);
         transform.position = new Vector3((float) x, initialPosition.y, z);
     }
 }
